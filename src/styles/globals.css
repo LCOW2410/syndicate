@@ -1,0 +1,58 @@
+@import "clash-grotesk.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 246 42% 13%;         
+    --foreground: 44 100% 85%;         
+
+    --card: 246 32% 18%;
+    --card-foreground: 44 100% 85%;
+
+    --popover: 244 38% 22%;
+    --popover-foreground: 44 100% 80%;
+
+    --primary: 44 100% 60%;           
+    --primary-foreground: 246 42% 13%;
+
+    --secondary: 195 100% 50%;         
+    --secondary-foreground: 246 42% 13%;
+
+    --muted: 244 21% 23%;
+    --muted-foreground: 44 100% 80%;
+
+    --accent: 16 100% 50%;             
+    --accent-foreground: 246 42% 13%;
+
+    --destructive: 0 85% 46%;
+    --destructive-foreground: 44 100% 85%;
+
+    --border: 244 21% 23%;
+    --input: 244 21% 23%;
+    --ring: 44 100% 80%;
+
+    --radius: 0.3rem;
+  }
+}
+
+@layer base {
+  html {
+    @apply text-[15px] antialiased;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  .nav-active {
+    color: hsl(var(--secondary));
+    @apply text-xs uppercase tracking-wider;
+  }
+  .nav-link {
+    @apply text-xs text-muted-foreground tracking-wider;
+  }
+  .text-gradient {
+    @apply bg-gradient-to-tr from-primary to-accent bg-clip-text text-transparent text-lg font-bold;
+  }
+}
